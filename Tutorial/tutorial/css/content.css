@@ -353,7 +353,7 @@ pre {
   border-right-color: #eef;
   border-bottom-color: #eef;*/
 }
-.disrupt .details pre {
+.disrupt pre {
   background-color: #fdd;
 }
 .note pre{
@@ -684,33 +684,34 @@ span.new {
   font-weight: bold;
   color: #000;
 }
+i.red,
 span.red {
   font-weight: bold;
   color: #900;
 }
-.crimson {
+span.crimson {
   font-weight: bold;
   color: #f00;
 }
-.green {
+span.green {
   font-weight: bold;
   color: #090;
 }
-.blue {
+span.blue {
   font-weight: bold;
   color: #009;
 }
-.gold {
+span.gold {
   color: #960;
+}
+span.orange {
+  color: #c90;
 }
 .revised {
   font-weight: normal;
   color: #666;
   background-color: #fd9;
 }
-/*strong {
-color: #900;
-}*/
 .under {
   text-decoration: underline;
 }
@@ -850,7 +851,7 @@ iframe{
     background-color: transparent !important;
     color: #000 !important;
   }
-  .sidebar, .empty, .next, header, footer .nav, .preview a {
+  .sidebar, .empty, .next, nav, header, footer .nav, .preview a {
     display: none;
   }
   p.support::before { color: #669;}
@@ -882,4 +883,6 @@ iframe{
   a.url:visited:after {
     content: "";
   }
+
+
 }

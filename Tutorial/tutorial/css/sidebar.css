@@ -79,6 +79,7 @@ nav ol {
   padding-left: 0;
   box-sizing: border-box;
   margin: 1em 0  0;
+  overflow-y: auto;
 }
 
 nav li {
