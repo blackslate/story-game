@@ -1,0 +1,130 @@
+/* FIXED RULES */
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+p,
+h1 {
+  margin: 0;
+}
+
+body p::after {
+  content: " ...";
+}
+
+body.clicked p::after {
+  content: "";
+}
+
+body h1 {
+  opacity: 0;
+  transition: opacity 3s, color 2s 3s
+}
+
+body.clicked h1 {
+  opacity: 1;
+  color: red;
+}
+
+div.photo {
+  background-color: rgba(0, 0, 0, 0.1)
+}
+
+
+/* RULES DETERMINED BY @media QUERIES */
+/* 
+ * Note: background-color is used to show
+ * which @media rule currently applies
+ */
+
+
+div.container {
+  width: 133.333vh;
+  height: 100vh;
+  display: flex;
+  background-color: #ccc;
+  font-size: 8vh;
+}
+
+div.container > div {
+  width: 66.666vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+
+div.photo img {
+  width: 100%;
+}
+
+
+@media (max-aspect-ratio: 4/3) {
+  div.container {
+    background-color: #ccf;
+
+    width: 100vw;
+    height: 75vw;
+
+    font-size: 6vw;
+  }
+
+  div.container > div {
+    width: 50vw;
+  }
+}
+
+
+@media (max-aspect-ratio: 1/1) {
+  div.container {
+    background-color: #cfc;
+
+    height: 100vh;
+    width: 75vh;
+
+    font-size: 9vh;
+
+    flex-direction: column;
+  }
+
+  div.container > div {
+    height: 50vh;
+    width: auto;
+  }
+
+  div.photo {
+    order: -1;
+  }
+
+  div.photo img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+
+@media (max-aspect-ratio: 3/4) {
+  div.container {
+    background-color: #fcc;
+
+    height: 133.333vw;
+    width: 100vw;
+
+    font-size: 12vw;
+  }
+
+  div.container > div {
+    height: 66.6667vw;
+    width: auto;
+  }
+}

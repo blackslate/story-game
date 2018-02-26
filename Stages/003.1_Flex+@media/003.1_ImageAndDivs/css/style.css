@@ -1,0 +1,29 @@
+body {
+  font-size: 15vmin;
+}
+
+body p::after {
+  content: "...";
+}
+
+body.clicked p::after {
+  content: "";
+}
+
+body h1 {
+  opacity: 0;
+  transition: opacity 3s, color 2s 3s
+}
+
+body.clicked h1 {
+  opacity: 1;
+  color: red;
+}
+
+div {
+  width: 50%;
+}
+
+img {
+  width: 100%;
+}

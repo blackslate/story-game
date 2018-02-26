@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>My Game</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+      body {
+        font-size: 15vmin;
+      }
+      body p::after {
+        content: "...";
+      }
+      body.clicked p::after {
+        content: "";
+      }
+      body h1 {
+        opacity: 0;
+        transition: opacity 3s, color 2s 3s
+      }
+      body.clicked h1 {
+        opacity: 1;
+        color: red;
+      }
+    </style>  
+  </head>
+
+  <body>
+    <p>This game was made by</p>
+    <h1>Me!</h1>
+
+    <script>
+      document.body.onmouseup = function() {
+        document.body.classList.add("clicked")
+      }
+    </script>
+  </body>
+</html

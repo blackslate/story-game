@@ -1,0 +1,42 @@
+{
+  "short_name": "Forked"
+, "name": "Forked"
+, "dir": "ltr"
+, "lang": "ru"
+, "start_url": "index.html?launcher=true"
+, "background_color": "#000000" 
+, "theme_color": "#000022"
+, "display": "standalone"
+, "icons": [
+    {
+      "src": "img/icons/android/launcher-icon-1x.png"
+    , "type": "image/png"
+    , "sizes": "48x48"
+    }
+  , {
+      "src": "img/icons/android/launcher-icon-2x.png"
+    , "type": "image/png"
+    , "sizes": "96x96"
+    }
+  , {
+      "src": "img/icons/android/launcher-icon-4x.png"
+    , "type": "image/png"
+    , "sizes": "192x192"
+    }
+  , {
+      "src": "img/icons/android/splashscreen256.png"
+    , "type": "image/png"
+    , "sizes": "256x256"
+    }
+  , {
+      "src": "img/icons/android/splashscreen384.png"
+    , "type": "image/png"
+    , "sizes": "384x384"
+    }
+  , {
+      "src": "img/icons/android/splashscreen512.png"
+    , "type": "image/png"
+    , "sizes": "512x512"
+    }
+  ]
+}

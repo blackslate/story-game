@@ -1,0 +1,87 @@
+/* FIXED RULES */
+
+/*
+html {
+  height: 100%;
+}
+*/
+
+body {
+  font-size: 15vmin;
+  background-color: black;
+  /*
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  */
+  /*margin: 0;*/
+}
+
+
+p,
+h1 {
+  margin: 0;
+}
+
+body p::after {
+  content: " ...";
+}
+
+body.clicked p::after {
+  content: "";
+}
+
+body h1 {
+  opacity: 0;
+  transition: opacity 3s, color 2s 3s
+}
+
+body.clicked h1 {
+  opacity: 1;
+  color: red;
+}
+
+
+/* RULES DETERMINED BY @media QUERIES */
+/* 
+ * Note: background-color is used to show
+ * which @media rule currently applies
+ */
+
+
+div.container {
+  width: 133.333vh;
+  height: 100vh;
+  background-color: #ccc;
+}
+
+
+@media (max-aspect-ratio: 4/3) {
+  div.container {
+    background-color: #ccf;
+
+    width: 100vw;
+    height: 75vw;
+  }
+}
+
+
+@media (max-aspect-ratio: 1/1) {
+  div.container {
+    background-color: #cfc;
+
+    height: 100vh;
+    width: 75vh;
+  }
+}
+
+
+@media (max-aspect-ratio: 3/4) {
+  div.container {
+    background-color: #fcc;
+
+    height: 133.333vw;
+    width: 100vw;
+  }
+}

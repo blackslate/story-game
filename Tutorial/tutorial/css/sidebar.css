@@ -1,0 +1,136 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  background-color: rgba(255,255,255,0.8);
+  z-index: 2;
+  font-size: 1.5em;
+}
+
+nav input[type=checkbox] {
+  opacity: 0;
+}
+
+nav label {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  z-index: 2;
+
+  text-align: left;
+  color: #99c;
+  background-color: rgba(192,192,255, 0.0);
+  transition: background 0s 0.2s, width 0.2s 0s linear;
+}
+
+nav input[type=checkbox]:checked ~ label {
+  width: 300px;
+  color: #003;
+  background-color: rgba(192,192,255, 0.9);
+  border-bottom: 1px solid #669;
+  transition: background 0s 0s, width 0.2s 0.1s linear;
+}
+
+nav input[type=checkbox]:checked ~ div.menu {
+  left: 0;
+}
+
+nav input + label::before{
+  /*  font-family: asides;
+  padding: 0 0.5em 0 0.3em;
+  font-size: 2em;
+  content: "\e805";
+  position: relative;*/
+  top: 0;
+}
+
+nav input[type=checkbox]:checked + label::before{
+  color: #003;
+}
+
+nav div.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: absolute;
+  top: 50px;
+  width: 300px;
+  height: calc(100% - 50px);
+  padding: 0;
+
+  background-color: rgba(255,255,255, 0.9);;
+  left: -300px;
+
+  -webkit-transition: left 0.3s linear;
+  transition: left 0.3s linear;
+  border-right: 1px solid #ccf;
+  /*box-sizing: border-box;*/
+}
+
+nav ol {
+  padding-left: 0;
+  box-sizing: border-box;
+  margin: 1em 0  0;
+}
+
+nav li {
+  list-style-position: inside;
+}
+
+nav li.part {
+  padding: 1em 0 0.2em;
+  /*font-size: 1.1em; */
+  font-weight: bold;
+}
+
+nav li.target {
+  background-color:  #ccf;
+}
+
+nav li a {
+  text-decoration: none;
+}
+
+nav li a:visited {
+  color: #000;
+}
+
+nav li a:hover {
+  border-color: #aaa;
+  border-top-color: #e4e4e4;
+  border-left-color: #e4e4e4;
+}
+
+nav li a:active {
+  color: #000;
+  background-color: #ccc;
+  border-color: #ddd;
+  border-top-color: #bbb;
+  border-left-color: #bbb;
+}
+
+nav li.active a {
+  color: #600;
+  background-color: #c99;
+  border-color: #daa;
+  border-top-color: #b88;
+  border-left-color: #b88;
+}
+
+nav div.ref a.active {
+  background-color: #88b;
+  border: 1vmin solid #99c;
+  border-radius: 2.5vmin;
+  border-top-color: #77a;
+  border-left-color: #77a;
+
+  color: #000;  
+}
