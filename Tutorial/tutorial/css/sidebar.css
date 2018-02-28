@@ -86,7 +86,7 @@ nav li {
   list-style-position: inside;
 }
 
-nav li.part {
+nav li.section {
   padding: 1em 0 0.2em;
   /*font-size: 1.1em; */
   font-weight: bold;
