@@ -28,6 +28,7 @@ nav label {
   color: #99c;
   background-color: rgba(192,192,255, 0.0);
   transition: background 0s 0.2s, width 0.2s 0s linear;
+  cursor: pointer;
 }
 
 nav input[type=checkbox]:checked ~ label {

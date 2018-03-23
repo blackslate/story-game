@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'asides';
+  src: url('../../fonts/asides.eot');
+  src: url('../../fonts/asides.eot') format('embedded-opentype'), url('../../fonts/asides.woff') format('woff'), url('../../fonts/asides.ttf') format('truetype'), url('../../fonts/asides.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/*
+html, body {
+height: 100%;
+font-size: 16px;
+}
+html {
+margin: 0;
+background: #000; 
+}
+body {
+background: #fff;
+width: 600px;
+margin: 0 auto;
+}
+h2:first-child {
+margin-top: 0;
+}
+*/
+input {
+position: absolute;
+clip: rect(0,0,0,0);
+}
+
+div.tabs {
+position: relative;
+}
+div.tab {
+/*position: absolute;*/
+background: #fff;
+display:none;
+top:1em;
+}
+label {
+width: 10em;
+height: 2.5em;
+display:inline-block;
+}
+label::before{
+font-family: asides;
+padding: 0 0.25em;
+font-size: 2em;
+position: relative;
+top: 0.2em;
+}
+input[id~=nix] + label::before,
+input[id~=nix]:checked + label::before {
+content: "\e807";
+}
+input[id~=mac] + label::before,
+input[id~=mac]:checked + label::before {
+content: "\e808";
+}
+input[id~=win] + label::before,
+input[id~=win]:checked + label::before {
+content: "\e809";
+}
+input[id~=nix]:checked + label ,
+input[id~=nix]:checked + label::before,
+input[id~=mac]:checked + label ,
+input[id~=mac]:checked + label::before ,
+input[id~=win]:checked + label,
+input[id~=win]:checked + label::before {
+color: #669;
+}
+input:checked + label + div{
+display:block;
+padding-left: 0;
+padding-right: 0;
+}
