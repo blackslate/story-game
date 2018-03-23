@@ -48,7 +48,7 @@ background: #fff;
 display:none;
 top:1em;
 }
-label {
+.tabs label {
 width: 10em;
 height: 2.5em;
 display:inline-block;

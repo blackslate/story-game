@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>Terminal</title>
   <link rel="stylesheet" href="../css/terminal.css" />
+  <!-- <link rel="stylesheet" href="../css/tips.css" /> -->
 </head>
 
 <body>
@@ -49,7 +50,38 @@
             <p><img src="../img/terminalUbuntu.png" width="584"/></p>
           </div>
         </div>
+      </section>
 
+      <section>
+        <h2>Understanding the Command Line</h2>
+          <div class="optional details">
+            <h4>Command Line Tools</h4>
+            <p>You probably have plenty of experience using a mouse in a point-and-click <span class="keyword">graphic user interface</span> (GUI). You are used to double-clicking on files to open them, and dragging them from one folder to another, to move them. You are used to opening an application when you want to send an email, edit a photo or listen to music. There is always visual feedback on the screen to tell you, a human, what is happening. Even if it's only an endless progress bar.</p>
+            <p>And yet, at any given time, there are many applications running on your computer which do not appear anywhere on the screen. These are the <span class="keyword">command-line tools</span> (CLT).</p>
+            <p>When you go to a restaurant, you see the waiters who come to your table, with their little notebooks, but you do not normally see the cooks. Without the cooks, however, the restaurant would fail.</p>
+            <p>When you type a command into a Terminal window, you can imagine that you are talking directly to the cooks that produce all the goodness. The Terminal window is the equivalent of a waiter's notebook.</p>
+            <p>The operating system itself takes care of some commands, like <code>cd&nbsp;</code>. Other commands need a special <span class="strike">chef</span>  CLT application to take care of them, so you need to refer to the name of the application first. For example, <code>git --version</code> tells the application <code>git</code> (which has no window that you can see on the screen) to send back information about which <code>version</code> it is.</p>
+          </div>
+
+         
+          <h4>Particularities of the Terminal application</h4>
+          <div class="aside tip">You are probably used to editing text in a word processor. In a word processor, you can:
+            <ul>
+              <li>Select a chunk of text with your cursor</li>
+              <li>Replace that chunk of text by simply typing over it</li>
+              <li>Remove the selected text with keyboard shortcut for Cut</li>
+              <li>Easily undo and redo your actions</li>
+            </ul>
+            <p>In a word processor, you can also place the text insertion point anywhere you want and type to insert new text.</p>
+            <p>Terminal applications do not work that way.</p>
+            <p>In a Terminal application, you cannot cut or replace text, and you must use the arrow keys (rather than the mouse) to place the text insertion point. To delete text, you must place the text insertion point at the end of the text to delete and then use the backspace key to delete the characters one by one.</p>
+            <p>This may seem awkward to you at first, but it allows you to keep your hands over the keyboard at all times; you never need to reach out sideways for the mouse.</p>
+            <p>If, regrettably, you enter a command that does something that you did not want to do, your only solution is to enter a new command that explicitly undoes that precise action. It's good to check your command carefully before you press the Enter key.</p>
+          </div>
+
+          <h4>Copy and Paste in the Windows Command Prompt</h4>
+          <p class="aside tip">The standard keyboard shortcuts like <code>Ctrl-C</code> and <code>Ctrl-Z</code> were introduced by Apple in 1984 and were adopted in Windows applications only much later. The Windows Command Prompt uses an older keyboard shortcut system. In the Windows Command Prompt, you will need to use <code>Alt-Spacebar</code> to show a contextual menu, and then press the letter that appears underlined in the menu item that you want to use.<br /><br />For example, to select text, you can press <code>Alt-Spacebar</code> then E (for <code><span class="under">E</span>dit</code>), then M (for <code><span class="under">M</span>ark</code>). You can now use the arrow keys to move the selection around and extend it. Pressing Enter will copy the highlighted text to your clipboard. Use <code>Alt-Spacebar <span class="under">E</span>dit</code>, <code><span class="under">P</span>aste</code> to paste your text.</p>
+        </div>
       </section>
     </article>
   </main>

@@ -1,0 +1,49 @@
+.nav {
+  position: absolute;
+  right: 0;
+  /*  bottom: 0; */
+  margin: 0;
+  padding: 0;
+  height: 32px;
+  font-size: 0;
+  list-style: none;
+}
+header .nav {
+  bottom: 10px;
+  display: none; /* To be activated by JavaScript */
+}
+header .nav.active {
+  display: block
+}
+header .nav .disabled {
+  opacity: 0.25;
+  pointer-events: none;
+}
+.nav li {
+  display: inline-block;
+  /* HACK TO CENTRE ARROWS VERTICALLY */
+  position: relative;
+  top: 2px;
+}
+.nav a {
+  width: 20px;
+  overflow: hidden;
+  line-height: 30px;
+  margin-right: 1px;
+  display: block;
+}
+.nav img {
+  vertical-align: middle;
+  position: relative;
+}
+.nav a:hover img{
+  left: -20px;
+}
+.nav img[alt=back] {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}

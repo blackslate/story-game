@@ -1,0 +1,836 @@
+/*@font-face {
+  font-family: 'asides';
+  src: url('../fonts/asides.eot');
+  src: url('../fonts/asides.eot') format('embedded-opentype'), url('../fonts/asides.woff') format('woff'), url('../fonts/asides.ttf') format('truetype'), url('../fonts/asides.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+}
+html{
+  margin: 0;
+  background: #002;
+}
+body{
+  position: relative;
+  min-width: 600px;
+  margin: 0 auto;
+}
+main {
+  background: #eef;
+  height: 100%;
+  top: 0;
+}
+
+header {
+  background: #cad0fc;
+  position: relative;
+  height: 50px;
+  background-color: #ccf;
+  text-align: center;
+  box-sizing:border-box;
+  border-bottom: 1px solid #dde;
+}
+header h1 {
+  margin: 0;
+  padding: 0 45px;
+  padding-top: calc(25px - 0.5em);
+  line-height: 1em;
+}
+footer {
+  background-color: #e4e7fd;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 32px;
+  text-align: right;*/
+}
+
+/* CONTENT */
+
+/*section {
+  position: relative;
+  min-height: 100%;
+  padding: 0.5em;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  background-color: #f8f8ff;
+
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+div.test a,
+.preview a {
+  margin: 0.25em;
+  border: 1px outset #bdc4fb;
+  border-radius: 0.25em;
+  padding: 0.5em 1em;
+  background-color: #bdc4fb;
+  display: inline-block;
+}
+
+.preview a.plain {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.preview a[href=''],
+.preview a[href='']:hover,
+.preview a[href='']:active,
+.preview a[href='']:visited {
+  background-color: #eee;
+  border: 1px solid #eee;
+  text-decoration: none;
+  cursor: default;
+  color: #ccc;
+}
+.preview {
+  border: 1px solid #669;
+  border-radius: 0.5em;
+  padding-top: 1em;
+  color: #669;
+  font-weight: bold;
+}
+
+div.kudos p:first-child,
+div.next p:first-child,
+div.aside p:first-child,
+div.tip p:first-child,
+div.warn p:first-child,
+div.mail p:first-child,
+div.git p:first-child,
+div.issue p:first-child,
+div.disrupt p:first-child,
+div.preview p:first-child {
+  font-size: 1.25em;
+  display: inline;
+}
+.preview ul,
+.preview li:last-child {
+  margin-bottom: 0.25em;
+}
+.preview li {
+  font-weight: normal;
+}
+.preview [target=test] {
+  float: right;
+}
+.preview a.plain {
+  margin: 0;
+  padding: 0.1em;
+  background-color: #dde;
+  border-color: #dde;
+}
+.preview a.plain code {
+  background-color: transparent;
+}
+.preview code{
+  background-color: #e4e4f8;
+}
+
+div.test a:active,
+.preview a:active {
+  border-style: inset;
+}
+
+h1, h2, h3, h4 {
+  margin: 2em 0 0;
+  font-family: "Gill Sans",Helvetica, sans-serif;
+  font-weight:bold;
+  color: #003;
+}
+h1, h2 {
+  font-size:1.5em;
+}
+h2, h3, h4 {
+  color: #336;
+}
+h2 {
+  text-align: center;
+}
+h3 {
+  font-size:1.25em;
+  text-decoration: underline;
+}
+h4 {
+  font-size:1.1em;
+  font-style: oblique;
+}
+nav h3 {
+  margin: 0 0 0 1em;
+  text-decoration: none;
+}
+
+article {
+  height: calc(100% - 50px);
+  overflow: auto;
+  width: 100%;
+}
+article .top{
+  font-size: 1.25em;
+}
+article li{
+  margin: 0.5em 0;
+}
+
+section, section:target ~ :last-child {
+  display: none;
+}
+
+section.active,
+section:target,
+section:last-child {
+  display: flex;
+}*/
+
+.preview,
+.warn,
+.note,
+.tip,
+.git,
+.issue,
+.info,
+.next,
+.kudos,
+.support,
+.disrupt,
+pre {
+  display: block;
+  padding: 0.5em;
+  box-sizing: border-box;
+  margin: 0.5em 0;
+  text-align: left;
+  border-width: 1px;
+  border-radius: 0.4em;
+  border-style: inset;
+  background: #eef;
+  border-color: #ddf;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+}
+pre {
+  width: 100%;
+  overflow-x: auto;
+}
+.warn {
+  background: #fde7e4;
+  /*border-color: #fee;
+  border-right-color: #edd;
+  border-bottom-color: #edd;*/
+}
+.note {
+  background: #fdfde4;
+  /*border-color: #ffd;
+  border-right-color: #eed;
+  border-bottom-color: #eed;*/
+}
+.tip {
+  background: #e4fdfd;
+  border-color: #e4fdfd;
+  /*border-right-color: #dee;
+  border-bottom-color: #dee;*/
+}
+.git {
+  background: #efefe7;
+  /*border-color: #f8f0ff;
+  border-right-color: #dce;
+  border-bottom-color: #dce;*/
+}
+.git .note {
+  background: #ede;
+  /*border-color: #edf;
+  border-right-color: #dce;
+  border-bottom-color: #dce;*/
+}
+.issue {
+  background: #edc;
+  border-color: #edc;
+  /*border-right-color: #dce;
+  border-bottom-color: #dce;*/
+}
+.info {
+  background: #e4e7fd;
+  border-color: #e4e7fd;
+  /*border-right-color: #dde;
+  border-bottom-color: #dde;*/
+}
+.next {
+  background: #e4fde4;
+  /*border-color: #efe;
+  border-right-color: #ded;
+  border-bottom-color: #ded;*/
+}
+.kudos {
+  background: #e0d0ff;
+  /*border-color: #edf;
+  border-right-color: #dce;
+  border-bottom-color: #dce;*/
+}
+.support {
+  background: #336;
+  /*border-color: #669;
+  border-right-color: #003;
+  border-bottom-color: #003;*/
+  color: #fff;
+}
+.disrupt {
+  background: #ecc;
+  /*border-color: #669;
+  border-right-color: #003;
+  border-bottom-color: #003;*/
+}
+.git pre{
+  background: #ddc;
+  /*border-color: #ede;
+  border-right-color: #fef;
+  border-bottom-color: #fef;*/
+}
+.details pre{
+  background: #e0e0f4;
+  /*border-color: #dde;
+  border-right-color: #eef;
+  border-bottom-color: #eef;*/
+}
+.disrupt pre {
+  background-color: #fdd;
+}
+.note pre{
+  background: #f4f4e0;
+  /*border-color: #eed;
+  border-right-color: #ffe;
+  border-bottom-color: #ffe;*/
+}
+div.aside ul:last-child,
+div.aside p:last-child {
+  margin-bottom: 0;
+}
+.tips .aside {
+  margin: 0.5em 3em;
+}
+a.cc {
+  font-family: asides;
+  font-weight: normal;
+  text-decoration: none;
+  /*
+  padding: 0 0.5em 0 0;
+  font-size: 1.2em;
+  position: absolute;
+  left: 1em;
+  top: 0.25em;
+
+  */}
+.trouble p::before,
+.aside::before {
+  font-family: asides;
+  padding: 0 0.5em 0 0;
+  font-size: 1.2em;
+}
+.note::before,
+p.note::before {
+  content: "\e800";
+  color: #cc6;
+}
+.info::before {
+  content: "\e801";
+  color: #66c;
+}
+.hub::before {
+  content: "\e802";
+  color: #666;
+}
+.warn::before {
+  content: "\e803";
+  color: #c66;
+}
+.tip::before {
+  content: "\e804";
+  color: #6cc;
+}
+/* \e805 >
+\e806 v
+\e807 nix
+\e808 mac
+\e809 win
+*/
+p.support::before {
+  content: "\e80a";
+  color: #fff;
+}
+
+p.support a,
+p.support a:visited{
+  color: #bbf;
+}
+p.support a:hover,
+p.support a:active{
+  color: #ddf;
+}
+
+.preview:before {
+  content: "\e80b";
+  color: #669;
+}
+.next::before {
+  content: "\e80b";
+  color: #6c6;
+}
+
+.git::before {
+  content: "\e80c";
+  color: #769;
+}
+.git .note::before {
+  color: #c99;
+}
+.kudos::before {
+  content: "\e80d";
+  color: #96c;
+}
+.disrupt::before {
+  content: "\e80e";
+  color: #966;
+}
+.issue::before {
+  content: "\e80f";
+  color: #986;
+}
+.symptom::before{
+  content: "\e810";
+}
+/* bug \e810
+cc \e811
+*/
+
+.symptom {
+  font-weight: bold;
+}
+
+/*figure{
+  text-align: center;
+  margin: 1em 0;
+}
+figcaption {
+  text-align: center;
+  margin-top: 1em;
+  font-size: 0.85em;
+  font-weight: bold;
+}
+figure p {
+  text-align: left;
+}
+figure img {
+  max-width: 100%;
+  border: 1px solid #000;
+}*/
+
+.keyword{
+  font-style:oblique;
+}
+code{
+  background-color: #f0f0ff;
+  white-space: pre;
+}
+
+section.optional {
+  background-color: #f8f8ff;
+}
+.aside + div.optional {
+  margin-top: 2em;
+}
+.details>div{
+  background-color: #f8f8ff;
+  border: 0px solid #eef;
+}
+.details.transparent>div{
+  background-color: transparent;
+  border: none;
+}
+.details code{
+  background-color: #eef;
+}
+.disrupt code{
+  background-color: #dbb;
+}
+
+div.aside code.transparent {
+  background-color: transparent;
+}  background-color: transparent;
+}
+
+.details label,
+.details label::before{
+  color: #336;
+}
+.issue code,
+.issue pre{
+  background-color: #dcb;
+}
+.issue pre{
+  border-right-color: #ddd;
+  border-bottom-color: #ddd;
+}
+.issue a,
+.issue a:visited{
+  color: #642;
+}
+.issue a:hover,
+.issue a:active{
+  color: #864;
+}
+/*#terminal .details {
+margin: 2em 0;
+}*/
+.tips>div{
+  background-color: #f8ffff;
+  border: 0px solid #eff;
+}
+.tips code{
+  background-color: #eff;
+}
+.tips label,
+.tips label::before{
+  color: #366;
+}
+.trouble>div{
+  background-color: #ffe;
+  border: 0px solid #ffc;
+}
+.trouble code,
+.trouble pre{
+  background-color: #eed;
+}
+.trouble label,
+.trouble label::before{
+  color: #633;
+}
+.break>div{
+  background-color: #fff8f8;
+  border: 0px solid #fcc;
+}
+.break pre,
+.break code{
+  background-color: #edd;
+}
+.break h3,
+.break label,
+.break label::before{
+  color: #966;
+}
+
+.warn code{
+  background-color: #ecc;
+}
+.warn span.h2 {
+  color: #c66;
+  font-size: 1.25em;
+}
+.note code{
+  background-color: #eec;
+}
+.git .note code{
+  background-color: #dcd;
+}
+.tips pre {
+  background-color: #eef8f8
+}
+.tip pre,
+.tip code{
+  background-color: #cee
+}
+.git code{
+  background-color: #ddc;
+}
+.info pre{
+  background-color: #ddddf8;
+}
+
+.info code{
+  background-color: #ccf;
+}
+.next code{
+  background-color: #cfc;
+}
+
+dt {
+  font-weight: bold;
+  margin: 0.75em ;
+}
+dd {
+  margin-left: 1.5em;
+}
+dd p {
+  margin: 0;
+  margin-bottom: 0.25em;
+}
+
+input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  /*top: 0;*/
+}
+input + label{
+  font-family: "Gill Sans",Helvetica, sans-serif;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+input + label::before{
+  font-family: asides;
+  padding: 0 0.5em 0 0.3em;
+  font-size: 2em;
+  content: "\e805";
+  position: relative;
+  top: 0.2em;
+}
+input[type=checkbox]:checked + label::before{
+  padding-right: 0.45em; /*To account for change in content */
+  content: "\e806";
+}
+.inverted input:checked ~ div, /* while authoring, to close optional divs */
+input ~ div{
+  height: 0;
+  top: -2.2em;
+  overflow: hidden;
+  position: relative;
+}
+.inverted input ~ div, /*while authoring, to open all optional divs*/
+input:checked ~ div{
+  height: auto;
+  padding: 0.5em;
+  padding-top: 2em;
+  border-width: 1px;
+}
+
+
+
+.empty label,
+.empty label::before{
+  color: #ddd;
+}
+.empty input ~ div,
+.empty input:checked ~ div{
+  height: 0;
+  padding: 0;
+  border-width: 0;
+}
+.empty input:checked + label::before{
+  padding-right: 0.5em; /*To account for change in content */
+  content: "\e805";
+}
+
+span.new {
+  font-weight: bold;
+  color: #000;
+}
+i.red,
+span.red {
+  font-weight: bold;
+  color: #900;
+}
+span.crimson {
+  font-weight: bold;
+  color: #f00;
+}
+span.green {
+  font-weight: bold;
+  color: #090;
+}
+span.blue {
+  font-weight: bold;
+  color: #009;
+}
+span.gold {
+  color: #960;
+}
+span.orange {
+  color: #c90;
+}
+.revised {
+  font-weight: normal;
+  color: #666;
+  background-color: #fd9;
+}
+.under {
+  text-decoration: underline;
+}
+.strike {
+  text-decoration: line-through;
+  color: #669;
+}
+.hover {
+  opacity: 0;
+}
+.hover:hover {
+  opacity: 1;
+}
+
+blockquote {
+  font-style: oblique;
+}
+cite {
+  display: block;
+  color: #66c;
+  font-style: normal;
+}
+.pre {
+  white-space: pre;
+}
+pre.wrap {
+  white-space: normal;
+  word-wrap: break-word;
+}
+.aaa {
+  font-weight: normal;
+  color: #aaa;
+}
+.ymmv {
+  font-weight: normal;
+  color: #999;
+  font-style: oblique;
+}
+.info .ymmv {
+  color: #66c;
+}
+.next .ymmv {
+  color: #9b9;
+}
+.comment {
+  font-weight: normal;
+  color: #ca8;
+  font-style: oblique;
+}
+.output {
+  font-weight: normal;
+  color: #999;
+  font-style: oblique;
+}
+.incomplete {
+  font-weight: normal;
+  color: #999;
+  font-style: oblique;
+}
+.omit {
+  font-weight: lighter;
+  color: #99c;
+  font-style: oblique;
+}
+.delete {
+  text-decoration: line-through;
+  color: #900;
+}
+.sidebar .support {
+  margin: 0;
+  height: 5.5em;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 0;
+}
+.nul {
+  list-style-type: none;
+  padding: 0;
+}
+.select {
+  background-color: #aed4fe;
+}
+.console {
+  background-color: #fff;
+  border: 1px solid #999;
+  border-right-color: #ccc;
+  border-bottom-color: #ccc;
+  font-family: "Lucida Console", Monaco, monospace;
+  line-height: 1.5em;
+  border-radius: 0;
+}
+.console .input::before {
+  content: "> ";
+}
+.console .output {
+  font-style: normal;
+  margin: 0.2em 0;
+}
+.console .output::before {
+  content: "< ";
+}
+.unselectable,
+.unselectable * {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+/*div.test {
+  text-align: center;
+}
+
+span.big {
+  font-size: 1.5em
+}
+
+span.placeholder,
+span.new i {
+  color: #630;
+  font-style: italic;
+  font-weight: bold;
+}
+
+iframe{
+  width: 100%;
+  height: 180px;
+  border: 1px solid #eee;
+}
+
+@media print
+{
+  * {
+    background-color: transparent !important;
+    color: #000 !important;
+  }
+  .sidebar, .empty, .next, nav, header, footer .nav, .preview a {
+    display: none;
+  }
+  p.support::before { color: #669;}
+  main, section { display: block; padding-bottom: 0;}
+  main {left: 0; width: auto; height: auto;}
+  input ~ div {height: auto; top: 0;}
+  footer {height: 1px; page-break-after: always;}
+  p,
+  figure {
+    display: block;
+    page-break-before: auto;
+    page-break-after: auto;
+    page-break-inside: avoid;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:link:after,
+  a:visited:after {
+    content: " (http://lexogram.github.io/openbook/" attr(href) ") ";
+    font-weight: normal;
+    font-style: oblique;
+  }
+  a[href^="http"]:link:after,
+  a[href^="http"]:visited:after {
+    content: " (" attr(href) ")";
+  }
+  a.url:link:after,
+  a.url:visited:after {
+    content: "";
+  }
+
+
+}*/
