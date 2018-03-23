@@ -25,6 +25,15 @@ h2:first-child {
 margin-top: 0;
 }
 */
+
+@font-face {
+font-family: 'asides';
+src: url('../fonts/asides.eot');
+src: url('../fonts/asides.eot') format('embedded-opentype'), url('../fonts/asides.woff') format('woff'), url('../fonts/asides.ttf') format('truetype'), url('../fonts/asides.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
 input {
 position: absolute;
 clip: rect(0,0,0,0);
@@ -34,7 +43,7 @@ div.tabs {
 position: relative;
 }
 div.tab {
-/*position: absolute;*/
+position: absolute;
 background: #fff;
 display:none;
 top:1em;
@@ -75,4 +84,5 @@ input:checked + label + div{
 display:block;
 padding-left: 0;
 padding-right: 0;
+margin: 2em 0;
 }
