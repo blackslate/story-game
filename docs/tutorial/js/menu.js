@@ -120,6 +120,9 @@
       if (!href.startsWith(this.pageURL)) {
         // Allow external links to escape
         return
+      } else if (href.endsWith(".html")) {
+        // This is another page
+        return
       }
 
       let hash = href.substring(href.lastIndexOf("#") + 1)
